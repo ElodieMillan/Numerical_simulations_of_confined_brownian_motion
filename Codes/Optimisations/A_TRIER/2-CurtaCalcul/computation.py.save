@@ -1,0 +1,106 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+import sys
+sys.path.append('../')
+
+from C4_theo_asymptotique__trapz import C4_court, C4_long
+from DoubleRigidWallOverdampedBrownExp_Cython import RigidWallOverdampedLangevin3D
+from Physic_function_problem import *
+import cythonised_simu_part
+
+from scipy.integrate import quad
+from scipy.io import loadmat
+from scipy.optimize import curve_fit
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import numpy as np
+from mpl_toolkits.mplot3d import Axes3D
+from numpy import trapz
+import matplotlib.gridspec as gridspec
+from matplotlib.collections import LineCollection
+from mpltools import annotation
+from scipy.optimize import curve_fit
+import time
+
+t1 = time.time()
+print("start")
+import sys
+
+input1 = sys.argv[1]
+
+
+import csv
+
+from tqdm import tqdm
+
+# Param fixé comme expériences
+a = 1.519e-6 #1.12e-6/2
+H = 40e-6
+lD = 88.0e-9 #Répultion mur
+kBT=1.38e-23*300
+lB = 526e-9 #gravité
+B = 5.0
+eta=0.001
+
+
+dt = 1e-2
+Nt = 10000000
+Nt_sub = 1
+tt = np.linspace(dt, dt*Nt, Nt)
+
+zz = np.linspace(-H, -H+20e-6, 10000000)
+dt_C4 = [*np.arange(1, 10), *np.arange(10, 100, 10), *np.arange(100, 1000, 100), *np.arange(1000, 10000, 1000), 10000]
+
+dt_C4 = np.logspace(np.log(1)/np.log(10), np.log(1000001)/np.log(10),120).astype(int)
+dt_C4 = np.unique(dt_C4)
+
+dt_s_C4 = np.array(dt_C4) * dt
+#dt_C4 = [*np.arange(1, 1000)]
+#Dpara = D_para(zz, a, eta, H)
+#Peq = P_eq(zz, B, lD, lB, H)/np.trapz(P_eq(zz, B, lD, lB, H), zz)
+#mean_Dpara_2 = np.trapz(Peq*D_para(zz, a, eta, H), zz) ** 2
+
+
+Sigma = 6
+D_0 = 4e-21 / (6*np.pi*0.001*a)
+
+limits = np.sqrt(2*D_0*dt_s_C4)
+bins = 200
+
+def calcul(n):
+
+    PDFS = np.zeros((len(limits), bins))
+    simu = RigidWallOverdampedLangevin3D(dt=dt, Nt=Nt, a=a, H=H, lD=lD, lB=lB, B=B, Nt_sub=Nt_sub)
+    simu.trajectory()
+    result = np.zeros((2,len(dt_C4)))
+    for n, i in enumerate(dt_C4):
+        dX  = simu.x[i:] - simu.x[:-i]
+        #D_para_z = D_para(simu.z[:-i], a, eta, H)
+        #result[0,n] = np.mean(dX **4) - 3 * (np.mean(dX **2))**2
+        #result[1,n] = 12 * ( np.mean(dX ** 2 * D_para_z) -  2 * i*dt * mean_Dpara_2)
+        limit = limits[n]
+        X, _ = np.histogram(dX, bins = bins, range=[-limit*Sigma, limit*Sigma]) 
+        PDFS[n,:] = X
+    del simu    
+    return PDFS
+
+import os
+import multiprocessing
+print(multiprocessing.cpu_count())
+pool = multiprocessing.Pool(processes=multiprocessing.cpu_count())
+nb_simu = 60
+result = pool.map(calcul, range(nb_simu))
+PDFS = np.zeros((len(limits), bins))
+#res = np.zeros((2,len(dt_C4)))
+for i in result:
+    PDFS += i
+
+
+
+
+#np.save(input1, res)
+np.save(input1, PDFS)
+#print(PDFS)
+print(time.time() - t1)
+
