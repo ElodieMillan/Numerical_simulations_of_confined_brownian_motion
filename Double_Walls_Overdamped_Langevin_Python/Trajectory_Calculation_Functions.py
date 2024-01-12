@@ -211,13 +211,13 @@ def twist():
 BOX-MULLER ALGORITHM 
 '''
 def random_gaussian():
-    w = 2.0
-    while (w >= 1.0):
+    S = 2.0
+    while (S >= 1.0):
         x1 = 2.0 * random_mersenne_twister() - 1.0
         x2 = 2.0 * random_mersenne_twister() - 1.0
-        w = x1 * x1 + x2 * x2
-    w = ((-2.0 * np.log(w)) / w) ** 0.5
-    return x1 * w
+        S = x1 * x1 + x2 * x2
+        S = ((-2.0 * np.log(S)) / S) ** 0.5
+    return x1 * S
 
 '''
 Trajectory compute (Xn, Zn).
