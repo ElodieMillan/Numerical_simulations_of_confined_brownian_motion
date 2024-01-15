@@ -242,13 +242,13 @@ def trajectory_python(Nt, Nt_sub, Rn, dt, a, eta0, kBT, H, lB, lD, B):
     Zn = Rn[1,0]
     seed_random(0)
 
-    for i in range(1, Nt):
+    for n in range(1, Nt):
         for j in range(0, Nt_sub):
             Xn = next_Xn(Xn, Zn, random_gaussian(), dt, a, eta0, kBT, H)
             Zn = next_Zn(Zn, random_gaussian(), dt, a, eta0, kBT, H, lB, lD, B)
 
-        Rn[0,i] = Xn
-        Rn[1,i] = Zn
+        Rn[0,n] = Xn
+        Rn[1,n] = Zn
 
     return Rn
 

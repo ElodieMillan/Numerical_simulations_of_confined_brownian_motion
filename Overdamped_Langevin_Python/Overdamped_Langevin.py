@@ -47,13 +47,13 @@ class Langevin:
         @param output: Boolean, if True return Xn (default = False).
         @return: Trajectory Xn.
         """
-        for i in range(self.Nt-1):
+        for n in range(self.Nt-1):
             Wn = random_gaussian()
             if self.gravity:
                 self.U = self.pm*(self.kb*self.T)/self.lB / self.gamma # Signe of speed from force given by lB in input.
             else:
                 self.U = 0
-            self.Xn[i+1] = self.Xn[i] + self.U*self.dt + np.sqrt(2*self.D0)* Wn * np.sqrt(self.dt)
+            self.Xn[n+1] = self.Xn[n] + self.U*self.dt + np.sqrt(2*self.D0)* Wn * np.sqrt(self.dt)
         if output:
             return self.Xn
 
@@ -64,26 +64,26 @@ class Langevin:
         """
         @return: (< [Xn(t+tau) - Xn(t)]^2 >, tau).
         """
-        self.list_i_tau = np.array([], dtype=int) #Liste des entiers Ntau tel que tau = Ntau*dt
-        for i in range(len(str(self.Nt)) - 1):
-            # Prend 10 points par décades
-            self.list_i_tau = np.concatenate(
+        self.list_k_tau = np.array([], dtype=int) # Liste des entiers k tel que tau = k*dt
+        for k in range(len(str(self.Nt)) - 1):
+            # Construit 10 points par décades
+            self.list_k_tau = np.concatenate(
                 (
-                    self.list_i_tau,
-                    np.arange(10 ** i, 10 ** (i + 1), 10 ** i, dtype=int),
+                    self.list_k_tau,
+                    np.arange(10 ** k, 10 ** (k + 1), 10 ** k, dtype=int),
                 )
             )
 
         x = self.Xn
-        NumberOfMSDPoint = len(self.list_i_tau)
+        NumberOfMSDPoint = len(self.list_k_tau)
         self.MSD = np.zeros(NumberOfMSDPoint)
-        for n, i in enumerate(self.list_i_tau):
-            if i == 0:
+        for n, k in enumerate(self.list_k_tau):
+            if k == 0:
                 self.MSD[n] = 0
                 continue
-            self.MSD[n] = np.mean((x[i:] - x[0:-i]) ** 2)
+            self.MSD[n] = np.mean((x[k:] - x[0:-k]) ** 2)
 
-        return self.list_i_tau*self.dt, self.MSD
+        return self.list_k_tau*self.dt, self.MSD
 
 '''
 MERSENNE-TWISTER ALGORiTHM IN PYTHON

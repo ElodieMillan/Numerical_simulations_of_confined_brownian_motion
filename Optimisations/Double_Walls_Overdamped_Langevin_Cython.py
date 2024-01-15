@@ -94,25 +94,25 @@ class DoubleWallsLangevin_Cy( Langevin ):
         else:
             raise ValueError('WRONG AXIS : choose between "x" and "z" !')
 
-        list_Ntau_MSD = np.array([], dtype=int)
-        for i in range(len(str(self.Nt)) - 1):
+        list_k_tau = np.array([], dtype=int)
+        for k in range(len(str(self.Nt)) - 1):
             # Take just 10 points by decade.
-            list_Ntau_MSD = np.concatenate(
+            list_k_tau = np.concatenate(
                 (
-                    list_Ntau_MSD,
-                    np.arange(10 ** i, 10 ** (i + 1), 10 ** i, dtype=int),
+                    list_k_tau,
+                    np.arange(10 ** k, 10 ** (k + 1), 10 ** k, dtype=int),
                 )
             )
         # -----------------------
-        NumberOfMSDPoint = len(list_Ntau_MSD)
+        NumberOfMSDPoint = len(list_k_tau)
         msd = np.zeros(NumberOfMSDPoint)
-        for k, i in enumerate(tqdm(list_Ntau_MSD)):
-            if i == 0:
-                msd[k] = 0
+        for n, k in enumerate(tqdm(list_k_tau)):
+            if k == 0:
+                msd[n] = 0
                 continue
-            msd[k] = np.mean((position[i:]-position[:-i])**2)
+            msd[n] = np.mean((position[k:]-position[:-k])**2)
 
-        return self.dt*self.Nt_sub*list_Ntau_MSD, msd
+        return self.dt*self.Nt_sub*list_k_tau, msd
 
     def logarithmic_hist(self, position: np.ndarray, begin: float, stop: float, num: int = 50, base: int = 10) -> (np.ndarray, np.ndarray, np.ndarray):
         """Function to compute a pdf using  logspaced bins
@@ -164,25 +164,25 @@ class DoubleWallsLangevin_Cy( Langevin ):
         else:
             raise ValueError('WRONG AXIS : choose between "x" and "z" !')
 
-        list_Nt_c4 = np.array([], dtype=int)
-        for i in range(len(str(self.Nt)) - 1):
+        list_k_tau = np.array([], dtype=int)
+        for k in range(len(str(self.Nt)) - 1):
             # Take just 10 points by decade.
-            list_Nt_c4 = np.concatenate(
+            list_k_tau = np.concatenate(
                 (
-                    list_Nt_c4,
-                    np.arange(10 ** i, 10 ** (i + 1), 10 ** i, dtype=int),
+                    list_k_tau,
+                    np.arange(10 ** k, 10 ** (k + 1), 10 ** k, dtype=int),
                 )
             )
-        c4 = np.zeros(len(list_Nt_c4))
+        c4 = np.zeros(len(list_k_tau))
         # Compute fourth cumulant
-        for k, i in enumerate(list_Nt_c4):
-            if i == 0:
-                c4[k] = 0
+        for n, k in enumerate(list_k_tau):
+            if k == 0:
+                c4[n] = 0
                 continue
-            deltaX = position[i:] - position[:-i]
-            c4[k] = (np.mean(deltaX**4) - 3 * (np.mean(deltaX**2))**2)
+            deltaX = position[k:] - position[:-k]
+            c4[n] = (np.mean(deltaX**4) - 3 * (np.mean(deltaX**2))**2)
 
-        return self.dt*self.Nt_sub * list_Nt_c4, c4
+        return self.dt*self.Nt_sub * list_k_tau, c4
 
     '''
     Some fonctions of the problem usefull.
