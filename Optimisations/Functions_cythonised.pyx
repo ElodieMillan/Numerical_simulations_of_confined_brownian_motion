@@ -283,7 +283,7 @@ Trajectory compute (Xn, Zn).
 @cython.wraparound(False)
 @cython.nonecheck(False)
 @cython.cdivision(True)
-cpdef double[:,:] trajectory_cython(unsigned long int Nt,
+cdef double[:,:] trajectory_cython(unsigned long int Nt,
                                    unsigned long int Nt_sub,
                                    double[:,:] Rn,
                                    double dt,

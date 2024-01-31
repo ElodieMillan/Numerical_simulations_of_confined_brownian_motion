@@ -21,9 +21,9 @@ jobs = [str(i) for i in range(0, Njob)]
 
 for j in jobs:
     job_file = os.path.join(job_directory,"%s.job" %j)
-    lizard_data = os.path.join(data_dir, j)
+    data = os.path.join(data_dir, j)
     # Create lizard directories
-    f = lizard_data + ".npy" #save data as .npy
+    f = data + ".npy" #save data as .npy
 
     with open(job_file, "w") as fh:
         fh.writelines("#!/bin/bash\n")

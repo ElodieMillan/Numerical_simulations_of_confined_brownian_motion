@@ -18,10 +18,7 @@ compiler_directives = {'language_level' : "3str",'boundscheck' : "False",'wrapar
 extensions = []
 
 for i in sources:
-    extension = Extension(i[:-4],
-                            sources= [i],
-                            language='c',
-                            define_macros=[("NPY_NO_DEPRECATED_API", "NPY_1_7_API_VERSION")])
+    extension = Extension(i[:-4], sources= [i], language='c')
 
     extensions.append(extension)
 
