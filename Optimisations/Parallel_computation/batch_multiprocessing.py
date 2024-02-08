@@ -9,7 +9,7 @@ def mkdir_p(dir):
 '''Parameter: should be identical to Multiprocessing.py file (defined here to save in proper name)'''
 bins = 200  # Choose the number of bins to compute PDF
 Nsigma = 6  # Choose the width of PDF by unit of STD
-Ns = 10_000 # Choose the number of trajectory wanted
+Ns = 100 # Choose the number of trajectory wanted
 Njob = 200 # Choose the number total of job wanted (Nb total of simulation = Ns*Njob)
 
 '''Defined jobs and save directories/files'''

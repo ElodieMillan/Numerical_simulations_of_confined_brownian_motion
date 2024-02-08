@@ -25,19 +25,19 @@ Nt = 1_000_000
 
 list_Ntau = np.logspace(np.log(1)/np.log(10), np.log(1000001)/np.log(10),120).astype(int)
 list_Ntau = np.unique(list_Ntau)
-List_tau = np.array(list_Ntau) * dt #list of lag time to cumpue C4
+List_tau = np.array(list_Ntau) * dt # List of lag time to cumpue C4
 
 def calcul(_):
     '''Initialization'''
     PDFS = np.zeros((len(List_tau), bins))
     simu = DoubleWallsLangevin_Cy(dt=dt, Nt=Nt, a=a, H=H, lD=lD, lB=lB, B=B, Nt_sub=1)
-    Sigma0 = np.sqrt(2 * simu.D0 * List_tau) #List of all gaussian STD in function of lag time tau (order of magnitude)
+    Sigma0 = np.sqrt(2 * simu.D0 * List_tau) # List of all gaussian STD in function of lag time tau (order of magnitude)
     '''Compute trajectory'''
     simu.trajectory()
     for n, i in enumerate(list_Ntau):
         dX  = simu.Xn[i:] - simu.Xn[:-i]
         STD = Sigma0[n]
-        X, _ = np.histogram(dX, bins = bins, range=[-STD*Nsigma, STD*Nsigma]) #Compute histogramme
+        X, _ = np.histogram(dX, bins = bins, range=[-STD*Nsigma, STD*Nsigma]) # Compute histogramme
         PDFS[n,:] = X
     del simu    
     return PDFS
@@ -46,7 +46,7 @@ def calcul_z(_):
     '''Initialization'''
     PDFS = np.zeros((len(List_tau), bins))
     simu = DoubleWallsLangevin_Cy(dt=dt, Nt=Nt, a=a, H=H, lD=lD, lB=lB, B=B, Nt_sub=1)
-    Sigma0 = np.sqrt(2 * simu.D0 * List_tau) #List of all gaussian STD in function of lag time tau (order of magnitude)
+    Sigma0 = np.sqrt(2 * simu.D0 * List_tau) # list of all gaussian STD in function of lag time tau (order of magnitude)
     '''Compute trajectory'''
     simu.trajectory()
     for n, i in enumerate(list_Ntau):
@@ -62,12 +62,12 @@ def calcul_z(_):
     return PDFS
 
 pool = multiprocessing.Pool(processes=multiprocessing.cpu_count()) #count number of CPU
-# run the "calcul" function in parallel on the CPUs Ns times
+# Run the "calcul" function in parallel on the CPUs Ns times
 result = list(tqdm(pool.imap(calcul_z, range(Ns)), total=Ns))
-#result = pool.map(calcul_z, range(Ns))
-PDFS = np.zeros((len(List_tau), bins)) #initialisation
+# Result = pool.map(calcul_z, range(Ns))
+PDFS = np.zeros((len(List_tau), bins)) # Initialisation
 for i in result:
-    PDFS += i[1] # sum all the PDFs for the final result
+    PDFS += i[1] # Sum all the PDFs for the final result
 
 np.save(input1, PDFS)
 print(time.time() - t1)
