@@ -194,9 +194,9 @@ def seed_random(seed):
     :return: none
     """
     if seed == 0:
-        mt_seed(time.time()*1e7) # generates a seed on the time in 10^-7 seconds
+        mt_seed(int(time.time()*1e7)) # generates a seed on the time in 10^-7 seconds
     else:
-        mt_seed(seed)
+        mt_seed(int(seed))
 
 # Generate the next n values from the series x_i
 def twist():
