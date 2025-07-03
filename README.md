@@ -20,7 +20,14 @@ If you use this code or any part of it in your work, please cite:
 
 **@ElodieMillan**, "[Numerical_Simulations_Confined_Langevin_Equation]" (2023), Github, https://github.com/ElodieMillan/Numerical_simulations_of_confined_brownian_motion,
 
-with the articles associated: [[https://link.springer.com/article/10.1140/epje/s10189-023-00281-y](https://link.springer.com/article/10.1140/epje/s10189-023-00281-y)]
+📰with the articles associated: 
+[1] Arthur Alexandre, Maxime Lavaud, Nicolas Fares, **Elodie Millan** et al. « Non-Gaussian Diffusion
+Near Surfaces ». In : Phys. Rev. Lett. 130 (7 (2023)), p. 077101.  doi : 10.1103/PhysRevLett.130.077101.
+[2] **Elodie Millan**, Maxime Lavaud, Yacine Amarouchene et Thomas Salez. « Numerical simulations of
+confined Brownian-yet-non-Gaussian motion. » In : Eur. Phys. J. E 46 (4 (2023)), p. 24.  doi :
+https://doi.org/10.1140/epje/s10189-023-00281-y.
+
+[[https://link.springer.com/article/10.1140/epje/s10189-023-00281-y](https://link.springer.com/article/10.1140/epje/s10189-023-00281-y)]
 [[https://theses.hal.science/tel-04583730](https://theses.hal.science/tel-04583730)].
 
 Thank you for your interest and collaboration!
