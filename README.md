@@ -17,7 +17,7 @@ The diffusion is affected by the walls presence and depend of the high *z*<sub>t
 
 - and my article research (english) [here](https://link.springer.com/article/10.1140/epje/s10189-023-00281-y).
 
-## License and Citation
+## ©️License and Citation
 This code is released under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
 You are free to use, modify, and share this code for any purpose, provided that proper credit is given.
 
