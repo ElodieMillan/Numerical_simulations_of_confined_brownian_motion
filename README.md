@@ -18,7 +18,7 @@ You are free to use, modify, and share this code for any purpose, provided that 
 
 If you use this code or any part of it in your work, please cite:
 
-**Élodie Millan**, "[Numerical_Simulations_Confined_Langevin_Equation]" (2023).  
+**Elodie Millan**, "[Numerical_Simulations_Confined_Langevin_Equation]" (2023).  
 [[https://link.springer.com/article/10.1140/epje/s10189-023-00281-y](https://link.springer.com/article/10.1140/epje/s10189-023-00281-y)]
 [[https://theses.hal.science/tel-04583730](https://theses.hal.science/tel-04583730)]
 
