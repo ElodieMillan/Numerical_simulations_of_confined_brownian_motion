@@ -9,9 +9,9 @@ This is the schematic of the system. \
 A particle ◯ of radius $a$, immersed in a fluid of viscosity $\eta_\mathrm{0}$, undergoing acceleration gravity $\vec{g}$ and confined between $${\color{#8295a1}two \space walls}$$ separated by a distance $2H_\mathrm{p}$, which diffuses in two dimensions $(x_t, z_t)$.
 
 Particule diffusion is affected by the presence of the two walls and depends on the height $z_t$. \
-[🔗Here](Double_Walls_Overdamped_Langevin_Python/Diffusion.pdf) is the plot the parrallèle diffusion ${\color{#009de0}D_\parallel(z_t)}$ and perpendicular diffusion $${\color{#008000}D_\perp (z_t)}$$ in fonction of the height *z*<sub>t</sub>.
+[🔗Here](Double_Walls_Overdamped_Langevin_Python/Diffusion.pdf) is the plot the parrallèle diffusion ${\color{#009de0}D_\parallel(z_t)}$ and perpendicular diffusion $${\color{#008000}D_\perp (z_t)}$$ in fonction of the height $z_t$.
 
-[🔗Here](Optimisations/Figures/Traj_Peq.pdf) is `(a)` an example of numerical tajectory (*x<sub>t</sub>, z<sub>t</sub>*) in fonction of time *t*, with `(b)` the Gibbs-Boltzmann equilibrium distribution of it height *z<sub>t</sub>* (the probability *P*<sub>eq</sub> to find the particle at a certain height *z*<sub>t</sub>).
+[🔗Here](Optimisations/Figures/Traj_Peq.pdf) is `(a)` an example of numerical tajectory in 2D $(x_t,z_t)$ in fonction of time $t=n \delta t$, with `(b)` the Gibbs-Boltzmann equilibrium distribution of it height $z_t$ (the probability $P_\mathrm{eq}$ to find the particle at a certain height $z_t$).
 
 ### For more informations about the project, 
 - you can find my PhD manuscript about this project (french) [🔗here]([Optimisations/Figures/Traj_Peq.pdf](https://theses.hal.science/tel-04583730)).
