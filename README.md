@@ -37,5 +37,5 @@ confined Brownian-yet-non-Gaussian motion. »_ In : Eur. Phys. J. E 46 (4 (2023)
 
 Thank you for your interest and collaboration!
 
-<a href="url"><img src="[http://url.to/image.png](https://github.com/user-attachments/assets/e429eb46-9ad7-406c-8bb5-17c48c15e196)" align="left" height="48" width="48" ></a>
+<a href="url"><img src="https://octodex.github.com/images/pythocat.png" align="left" height="48" width="48" ></a>
 <!-- ![pythocat-1](https://github.com/user-attachments/assets/e429eb46-9ad7-406c-8bb5-17c48c15e196) -->
