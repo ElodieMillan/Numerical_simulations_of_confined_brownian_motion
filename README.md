@@ -1,5 +1,7 @@
 # Numerical_Simulations_Confined_Langevin_Equation
 
+The background color is `#ffffff` for light mode and `#000000` for dark mode.
+
 This is my PhD code to simulate the Brownian motion confined between two rigid walls.
 It is make with `Python`, `Cython` and I use `Jupyter Notebook` to analyse datas.
 
