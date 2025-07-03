@@ -6,7 +6,7 @@ It is make with `Python`, `Cython` and I use `Jupyter Notebook` to analyse datas
 ## The problem :
 ![Schematic of the system. A particle of radius *a* diffuses in two dimensions, between two walls separated by a distance *2H*<sub>p </sub>.](https://media.springernature.com/lw685/springer-static/image/art%3A10.1140%2Fepje%2Fs10189-023-00281-y/MediaObjects/10189_2023_281_Figa_HTML.png?as=webp) \
 This is the schematic of the system. \
-A particle of radius *a* diffuses in two dimensions (*x<sub>t</sub>, z<sub>t</sub>*), immersed in a fluid of viscosity *η*<sub>0</sub>, undergoing acceleration gravity *g* and confined between two walls separated by a distance *2H*<sub>p</sub>.
+A particle of radius *a*, immersed in a fluid of viscosity *η*<sub>0</sub>, undergoing acceleration gravity *g* and confined between two walls separated by a distance *2H*<sub>p</sub>, diffuses in two dimensions (*x<sub>t</sub>, z<sub>t</sub>*),.
 
 Particule diffusion is affected by the presence of the two walls and depends on the height *z*<sub>t</sub>. \
 [🔗Here](Double_Walls_Overdamped_Langevin_Python/Diffusion.pdf) is the plot the parrallèle diffusion *D*<sub>∥</sub>(*z*<sub>t</sub>) $${\color{#009de0}(in \space blue)}$$ and perpendicular diffusion *D*<sub>⊥</sub>(*z*<sub>t</sub>) $${\color{#008000}(in \space green)}$$ in fonction of the height *z*<sub>t</sub>.
