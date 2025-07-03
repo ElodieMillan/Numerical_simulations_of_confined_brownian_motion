@@ -26,7 +26,7 @@ You are free to use, modify, and share this code for any purpose, provided that 
 
 If you use this code or any part of it in your work, please cite:
 
-> **@ElodieMillan**, "[Numerical_Simulations_Confined_Langevin_Equation]" (2023), Github, 🔗https://github.com/ElodieMillan/Numerical_simulations_of_confined_brownian_motion,
+> **@ElodieMillan**, "[Numerical_Simulations_Confined_Langevin_Equation]" (2023), Github, 🔗https://github.com/ElodieMillan/Numerical_simulations_of_confined_brownian_motion, [1,2].
 
 ## 📰References: 
 [1] Arthur Alexandre, Maxime Lavaud, Nicolas Fares, **Elodie Millan** et al. _« Non-Gaussian Diffusion
