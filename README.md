@@ -4,7 +4,7 @@ This is my PhD code to simulate the Brownian motion confined between two rigid w
 It is make with `Python`, `Cython` and I use `Jupyter Notebook` to analyse datas.
 
 ## The problem :
-![Schematic of the system. A particle of radius *a* diffuses in two dimensions, between two walls separated by a distance *2H*<sub>p </sub>.](https://media.springernature.com/lw685/springer-static/image/art%3A10.1140%2Fepje%2Fs10189-023-00281-y/MediaObjects/10189_2023_281_Figa_HTML.png?as=webp) \
+![Schematic of the system. A particle of radius *a* diffuses in two dimensions, between two walls separated by a distance $2H_\mathrm{p}$.](https://media.springernature.com/lw685/springer-static/image/art%3A10.1140%2Fepje%2Fs10189-023-00281-y/MediaObjects/10189_2023_281_Figa_HTML.png?as=webp) \
 This is the schematic of the system. \
 A particle ◯ of radius *a*, immersed in a fluid of viscosity *η*<sub>0</sub>, undergoing acceleration gravity $\vec{g}$ and confined between $${\color{#8295a1}two \space walls}$$ separated by a distance *2H*<sub>p</sub>, which diffuses in two dimensions (*x<sub>t</sub>, z<sub>t</sub>*).
 
