@@ -27,7 +27,4 @@ Near Surfaces »_. In : Phys. Rev. Lett. 130 (7 (2023)), p. 077101, 🔗https://
 [2] **Elodie Millan**, Maxime Lavaud, Yacine Amarouchene et Thomas Salez. _« Numerical simulations of
 confined Brownian-yet-non-Gaussian motion. »_ In : Eur. Phys. J. E 46 (4 (2023)), p. 24, 🔗https://doi.org/10.1140/epje/s10189-023-00281-y.
 
-[[https://link.springer.com/article/10.1140/epje/s10189-023-00281-y](https://link.springer.com/article/10.1140/epje/s10189-023-00281-y)]
-[[https://theses.hal.science/tel-04583730](https://theses.hal.science/tel-04583730)].
-
 Thank you for your interest and collaboration!
