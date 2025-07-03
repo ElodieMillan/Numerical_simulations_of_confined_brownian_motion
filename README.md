@@ -22,7 +22,8 @@ If you use this code or any part of it in your work, please cite:
 
 ## 📰References: 
 [1] Arthur Alexandre, Maxime Lavaud, Nicolas Fares, **Elodie Millan** et al. _« Non-Gaussian Diffusion
-Near Surfaces »_. In : Phys. Rev. Lett. 130 (7 (2023)), p. 077101, doi: https://doi.org/10.1103/PhysRevLett.130.077101 \
+Near Surfaces »_. In : Phys. Rev. Lett. 130 (7 (2023)), p. 077101, doi: https://doi.org/10.1103/PhysRevLett.130.077101 ,
+
 [2] **Elodie Millan**, Maxime Lavaud, Yacine Amarouchene et Thomas Salez. _« Numerical simulations of
 confined Brownian-yet-non-Gaussian motion. »_ In : Eur. Phys. J. E 46 (4 (2023)), p. 24, doi:
 https://doi.org/10.1140/epje/s10189-023-00281-y.
