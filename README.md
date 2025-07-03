@@ -14,9 +14,9 @@ The diffusion is affected by the walls presence and depend of the high *z*<sub>t
 [🔗Here](Optimisations/Figures/Traj_Peq.pdf) there is `(a)` an example of numerical tajectory *(x<sub>t</sub>, z<sub>t</sub>)* in fonction of time *t*, with `(b)` the Gibbs-Boltzmann equilibrium distribution of it altitude *z<sub>t</sub>* (the probability *P*<sub>eq</sub> to find the particle at a certain high *z*<sub>t</sub>).
 
 ### For more informations about the project, 
-- you can find my PhD manuscript about this project (french) [here]([Optimisations/Figures/Traj_Peq.pdf](https://theses.hal.science/tel-04583730)).
+- you can find my PhD manuscript about this project (french) [🔗here]([Optimisations/Figures/Traj_Peq.pdf](https://theses.hal.science/tel-04583730)).
 
-- and my article research (english) [here](https://link.springer.com/article/10.1140/epje/s10189-023-00281-y).
+- and my article research (english) [🔗here](https://link.springer.com/article/10.1140/epje/s10189-023-00281-y).
 
 ## ©️License and Citation
 This code is released under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
