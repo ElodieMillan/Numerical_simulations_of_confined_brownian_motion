@@ -29,4 +29,4 @@ confined Brownian-yet-non-Gaussian motion. »_ In : Eur. Phys. J. E 46 (4 (2023)
 
 Thank you for your interest and collaboration!
 
-![](https://myoctocat.com/assets/images/base-octocat.svg)
+![]([https://myoctocat.com/assets/images/base-octocat.svg](https://octodex.github.com/images/pythocat.png))
