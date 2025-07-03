@@ -9,9 +9,9 @@ This is the schematic of the system. \
 A particle of radius *a* diffuses in two dimensions *(x<sub>t</sub>, z<sub>t</sub>)*, immersed in a fluid of viscosity *η*<sub>0</sub>, undergoing acceleration gravity *g* and confined between two walls separated by a distance *2H*<sub>p</sub>.
 
 The diffusion is affected by the walls presence and depend of the high *z*<sub>t</sub>. \
-[Here](Double_Walls_Overdamped_Langevin_Python/Diffusion.pdf) is the plot the parrallèle diffusion *D*<sub>∥</sub>*(z*<sub>t</sub>*)* $${\color{#009de0}(in \space blue)}$$ and perpendicular diffusion *D*<sub>⊥</sub>*(z*<sub>t</sub>*)* $${\color{#008000}(in \space green)}$$ in fonction of the high *z*<sub>t</sub>.
+[🔗Here](Double_Walls_Overdamped_Langevin_Python/Diffusion.pdf) is the plot the parrallèle diffusion *D*<sub>∥</sub>*(z*<sub>t</sub>*)* $${\color{#009de0}(in \space blue)}$$ and perpendicular diffusion *D*<sub>⊥</sub>*(z*<sub>t</sub>*)* $${\color{#008000}(in \space green)}$$ in fonction of the high *z*<sub>t</sub>.
 
-[Here](Optimisations/Figures/Traj_Peq.pdf) there is `(a)` an example of numerical tajectory *(x<sub>t</sub>, z<sub>t</sub>)* in fonction of time *t*, with `(b)` the Gibbs-Boltzmann equilibrium distribution of it altitude *z<sub>t</sub>* (the probability *P*<sub>eq</sub> to find the particle at a certain high *z*<sub>t</sub>).
+[🔗Here](Optimisations/Figures/Traj_Peq.pdf) there is `(a)` an example of numerical tajectory *(x<sub>t</sub>, z<sub>t</sub>)* in fonction of time *t*, with `(b)` the Gibbs-Boltzmann equilibrium distribution of it altitude *z<sub>t</sub>* (the probability *P*<sub>eq</sub> to find the particle at a certain high *z*<sub>t</sub>).
 
 ### For more informations about the project, 
 - you can find my PhD manuscript about this project (french) [here]([Optimisations/Figures/Traj_Peq.pdf](https://theses.hal.science/tel-04583730)).
