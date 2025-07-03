@@ -20,7 +20,7 @@ If you use this code or any part of it in your work, please cite:
 
 > **@ElodieMillan**, "[Numerical_Simulations_Confined_Langevin_Equation]" (2023), Github, https://github.com/ElodieMillan/Numerical_simulations_of_confined_brownian_motion,
 
-##📰References: 
+## 📰References: 
 [1] Arthur Alexandre, Maxime Lavaud, Nicolas Fares, **Elodie Millan** et al. _« Non-Gaussian Diffusion
 Near Surfaces »_. In : Phys. Rev. Lett. 130 (7 (2023)), p. 077101.  doi : 10.1103/PhysRevLett.130.077101.\
 [2] **Elodie Millan**, Maxime Lavaud, Yacine Amarouchene et Thomas Salez. _« Numerical simulations of
